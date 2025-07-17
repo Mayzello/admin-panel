@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+.atur-waktu-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(255, 165, 0, 0.4);
+}
+
+h2 {
+  text-align: center;
+  color: #ffa726;
+  margin-bottom: 24px;
+}
+
+.back-button {
+  background-color: transparent;
+  border: 2px solid #ffa726;
+  color: #ffa726;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background-color: #ffa726;
+  color: #0d0d0d;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group label {
+  color: #ffa726;
+  font-weight: bold;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 2px solid #ffa726;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 14px;
+}
+
+.form-group button {
+  background-color: #ffa726;
+  color: #0d0d0d;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-group button:hover {
+  background-color: #ff9100;
+}
+
+.status {
+  margin-top: 10px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+}

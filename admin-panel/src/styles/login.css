@@ -1,0 +1,92 @@
+/* Reset & Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0e0e0e;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container Login */
+.login-container {
+  background: linear-gradient(to bottom right, #1a1a1a, #2a2a2a);
+  border: 2px solid #ffa726;
+  border-radius: 16px;
+  padding: 40px 32px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
+  color: #fff;
+}
+
+/* Judul */
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 28px;
+  color: #ffa726;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: #ffcc80;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  background-color: #222;
+  color: #fff;
+  border: 2px solid #ffa726;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #ff6f00;
+  outline: none;
+}
+
+/* Tombol Login */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(90deg, #ff9800, #f57c00);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #121212;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #f57c00, #e65100);
+}
+
+/* Error Message */
+.error-msg {
+  margin-top: 16px;
+  color: #ff5252;
+  text-align: center;
+  font-weight: bold;
+}

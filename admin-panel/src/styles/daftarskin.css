@@ -1,0 +1,49 @@
+.daftar-skin-container {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 20px;
+  font-family: sans-serif;
+}
+
+.back-btn {
+  background: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-btn:hover {
+  background: #2980b9;
+}
+
+.skin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.skin-card {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.skin-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.skin-card h4 {
+  margin: 10px 0 5px;
+}
+
+.skin-card p {
+  margin: 0;
+  color: #555;
+}
