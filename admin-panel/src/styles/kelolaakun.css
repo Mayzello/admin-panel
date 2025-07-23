@@ -1,109 +1,209 @@
+:root {
+  --primary-color: #ffa726;
+  --primary-hover: #ff9800;
+  --secondary-color: #42a5f5;
+  --secondary-hover: #2196f3;
+  --danger-color: #ef5350;
+  --danger-hover: #e53935;
+  --bg-dark: #0d0d0d;
+  --bg-darker: #1a1a1a;
+  --bg-darkest: #212121;
+  --border-color: #333;
+  --text-color: #ffffff;
+  --border-radius: 12px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
-  background-color: #0d0d0d;
-  font-family: 'Segoe UI', sans-serif;
-  color: #ffffff;
+  background-color: var(--bg-dark);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: var(--text-color);
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Container utama */
 .container {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 24px;
+  max-width: min(1200px, 95vw);
+  margin: clamp(40px, 5vw, 60px) auto;
+  padding: 0 clamp(20px, 3vw, 24px);
+  animation: fadeIn 0.6s ease-out forwards;
 }
 
-/* Tombol kembali */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .btn-back {
-  background-color: #1a1a1a;
-  color: #ffa726;
-  border: 2px solid #ffa726;
+  background-color: var(--bg-darker);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
   border-radius: 8px;
   padding: 10px 20px;
   cursor: pointer;
-  margin-bottom: 24px;
-  transition: all 0.3s ease;
+  margin-bottom: clamp(16px, 3vw, 24px);
+  transition: var(--transition);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .btn-back:hover {
-  background-color: #ffa726;
-  color: #0d0d0d;
+  background-color: var(--primary-color);
+  color: var(--bg-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 167, 38, 0.3);
 }
 
-/* Judul */
 .container h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #ffa726;
+  font-size: clamp(26px, 4vw, 32px);
+  margin-bottom: clamp(16px, 3vw, 20px);
+  color: var(--primary-color);
   text-align: center;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-/* Input cari */
 .search-input {
   width: 100%;
-  padding: 12px 16px;
-  margin-bottom: 20px;
+  padding: 14px 16px;
+  margin-bottom: clamp(16px, 3vw, 20px);
   border-radius: 10px;
-  border: 2px solid #ffa726;
-  background-color: #1a1a1a;
-  color: white;
-  font-size: 16px;
+  border: 2px solid var(--primary-color);
+  background-color: var(--bg-darker);
+  color: var(--text-color);
+  font-size: clamp(14px, 2vw, 16px);
+  transition: var(--transition);
 }
 
-/* Tabel */
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-hover);
+  box-shadow: 0 0 0 3px rgba(255, 167, 38, 0.2);
+}
+
 .user-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 40px;
-  background-color: #1a1a1a;
-  border-radius: 12px;
+  margin-bottom: clamp(30px, 4vw, 40px);
+  background-color: var(--bg-darker);
+  border-radius: var(--border-radius);
   overflow: hidden;
+  box-shadow: var(--box-shadow);
 }
 
 .user-table th,
 .user-table td {
-  border: 1px solid #333;
-  padding: 12px;
+  border: 1px solid var(--border-color);
+  padding: clamp(10px, 2vw, 12px);
   text-align: center;
+  transition: var(--transition);
 }
 
 .user-table th {
-  background-color: #212121;
-  color: #ffa726;
+  background-color: var(--bg-darkest);
+  color: var(--primary-color);
   font-weight: 600;
-  font-size: 14px;
+  font-size: clamp(13px, 2vw, 14px);
+  position: sticky;
+  top: 0;
+}
+
+.user-table tr:hover td {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .user-table td {
-  font-size: 14px;
+  font-size: clamp(13px, 2vw, 14px);
 }
 
-/* Tombol Aksi */
 .btn-reset,
 .btn-delete {
   padding: 8px 14px;
   margin: 4px;
   border: none;
   border-radius: 6px;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: var(--transition);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-reset {
-  background-color: #42a5f5;
-  color: #fff;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 .btn-reset:hover {
-  background-color: #2196f3;
+  background-color: var(--secondary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(66, 165, 245, 0.3);
 }
 
 .btn-delete {
-  background-color: #ef5350;
-  color: #fff;
+  background-color: var(--danger-color);
+  color: var(--text-color);
 }
 
 .btn-delete:hover {
-  background-color: #e53935;
+  background-color: var(--danger-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(239, 83, 80, 0.3);
+}
+
+/* Loading state */
+.btn-loading {
+  color: transparent;
+  pointer-events: none;
+}
+
+.btn-loading::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Responsive table */
+@media (max-width: 768px) {
+  .user-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* Dark mode preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-dark: #121212;
+    --bg-darker: #1e1e1e;
+    --bg-darkest: #252525;
+  }
 }

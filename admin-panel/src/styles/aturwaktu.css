@@ -80,3 +80,81 @@ h2 {
   font-weight: bold;
   font-size: 14px;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .atur-waktu-container {
+    margin: 40px 20px;
+    padding: 25px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+
+  .form-group input {
+    padding: 9px;
+    font-size: 13px;
+  }
+
+  .form-group button {
+    padding: 11px;
+    font-size: 15px;
+  }
+
+  .status {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .atur-waktu-container {
+    margin: 30px 15px;
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+  }
+
+  .back-button {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+
+  .form-group {
+    gap: 10px;
+  }
+
+  .form-group input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .form-group button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  .atur-waktu-container {
+    margin: 25px 10px;
+    padding: 18px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .form-group input {
+    padding: 7px;
+  }
+
+  .form-group button {
+    padding: 9px;
+    font-size: 13px;
+  }
+}
